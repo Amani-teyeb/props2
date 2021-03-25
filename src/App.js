@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from 'react';
+import Profile from './profile/Profile';
+import profilepic from './images/profilepic.jpg'
+
 
 function App() {
+  const handleAlert = (fullName) => {
+    alert(`my name is ${fullName}`);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile fullName = "Teyeb Amani"
+       bio = " born in 1994 in bengerden, a beginner webdevelopper as a student of GoMyCode society as well as an petroleum engineer as a student of the FST" 
+       profession = "begginer web developer"
+        handleAlert={handleAlert}> 
+        <img src={profilepic} alt = "img" /> 
+        </Profile>
+      
     </div>
   );
 }
 
 export default App;
+//
